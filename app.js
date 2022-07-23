@@ -1,14 +1,25 @@
+/**
+ *
+ * @returns {randomNumber}
+ */
 function getComputerChoice() {
   const choices = ['rock', 'paper', 'scissors'];
   const randomNumber = Math.ceil(Math.random() * 3);
   return choices[randomNumber];
 }
-
+/**
+ * @param {*} computerChoice
+ */
 function computerChoice() {
     const computerChoice = getComputerChoice();
     console.log(`The computer chose ${computerChoice}`);
 }
-
+/**
+ *
+ * @param {*} userChoice
+ * @param {*} computerChoice
+ * @returns
+ */
 function rockPaperScissors(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
     return 'The result is a tie!';
@@ -32,7 +43,11 @@ function rockPaperScissors(userChoice, computerChoice) {
     }
   }
 }
-
+/**
+ *
+ * @param {*} userInput
+ * @returns
+ */
 function getUserChoice(userInput) {
     userInput = prompt('Do you choose rock, paper or scissors?');
     userInput = userInput.toLowerCase();
@@ -42,7 +57,9 @@ function getUserChoice(userInput) {
         console.log('Please enter rock, paper or scissors.');
     }
 }
-
+/**
+ * Main function
+ */
 function game() {
     for (let i = 0; i < 5; i++) {
         const userChoice = getUserChoice();
@@ -51,7 +68,9 @@ function game() {
         console.log(rockPaperScissors(userChoice, computerChoice));
 }
 }
-
+/**
+ * Points to be added to the score
+ */
 function points() {
     let userPoints = 0;
     let computerPoints = 0;
